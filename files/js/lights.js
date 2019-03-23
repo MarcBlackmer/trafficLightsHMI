@@ -50,7 +50,6 @@ function statusBad() {
 
 // Control the order of the lights under normal circumstances
 function lightSequence(reps) {
-  console.log("lightSequence");
   setTimeout(function() {
     illuminateGreen();
   }, reps * 1000);
@@ -80,7 +79,6 @@ function timer(ctr) {
 
 // This is when the lights go bonkers
 function haywire(reps) {
-  console.log("haywire");
   setTimeout(function() {
     illuminateGreen();
   }, reps * 500);
@@ -110,9 +108,3 @@ function badTimer(ctr) {
 
 // Reset the lights to a normal pattern when the "Start" button is pushed
 document.getElementById("startButton").onclick = timer();
-
-// Stop running the lights when the "Stop" button is pushed
-//document.getElementById("stopButton").onclick
-
-//timer();
-//badTimer();
