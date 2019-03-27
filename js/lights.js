@@ -66,7 +66,7 @@ function lightSequence(reps) {
 
 // Create a message with the flag
 function worldSaved() {
-  alert("You just saved the world! Here is your flag for Turkey: Saved!");
+  alert("You just saved the world! Here is your flag for Turkey: World_Saved!");
 }
 
 // This is the default "normal" timer function to control the lights
@@ -98,17 +98,7 @@ function haywire(reps) {
   }, reps * 2000);
 }
 
-// This is the timer for the out of control lights
-function badTimer(ctr) {
-  ctr = typeof ctr !== 'undefined';
-  statusBad();
-  setInterval(function() {
-    haywire(1);
-    if (ctr > 0) {
-      timer(ctr - 1);
-    }
-  }, 2500);
-}
-
 // Reset the lights to a normal pattern when the "Start" button is pushed
-document.getElementById("startButton").onclick = timer();
+document.getElementById("startButton").addEventListener("click", function() {
+  timer();
+});
