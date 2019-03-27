@@ -64,11 +64,16 @@ function lightSequence(reps) {
   }, reps * 4000);
 }
 
+// Create a message with the flag
+function worldSaved() {
+  alert("You just saved the world! Here is your flag for Turkey: Saved!");
+}
+
 // This is the default "normal" timer function to control the lights
 function timer(ctr) {
   ctr = typeof ctr !== 'undefined';
   statusGood();
-  lightSequence(3);
+  worldSaved();
   setInterval(function() {
     lightSequence(3);
     if (ctr > 0) {
@@ -97,7 +102,6 @@ function haywire(reps) {
 function badTimer(ctr) {
   ctr = typeof ctr !== 'undefined';
   statusBad();
-  haywire(1);
   setInterval(function() {
     haywire(1);
     if (ctr > 0) {
